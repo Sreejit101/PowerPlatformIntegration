@@ -35,7 +35,7 @@ on:
 env:
 #edit your values here
   BUILD_ENVIRONMENT_URL: 'https://org2efe02e4.crm.dynamics.com'
-  PRODUCTION_ENVIRONMENT_URL: 'org45074c15.crm.dynamics.com'
+  PRODUCTION_ENVIRONMENT_URL: 'https://org45074c15.crm.dynamics.com'
   CLIENT_ID: '49740080-c68e-4ac2-b88f-3c2abedc05f9'
   TENANT_ID: '44ae661a-ece6-41aa-bc96-7c2c85a08941'
 
