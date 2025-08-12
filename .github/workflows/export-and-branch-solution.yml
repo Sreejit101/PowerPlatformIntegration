@@ -84,7 +84,7 @@ jobs:
     - name: Checkout Source Branch
       uses: actions/checkout@v3
       with:
-        ref: ${{ github.event.inputs.solution_target_folder}}/${{ github.event.inputs.solution_name }} 
+        ref: ${GITHUB_REF#refs/heads/}
 
     # Step 2: Copy the folder to a temporary directory
     - name: Copy Folder
