@@ -84,24 +84,24 @@ jobs:
     - name: Checkout Source Branch
       uses: actions/checkout@v3
       with:
-        ref: source-branch-name # Replace with your source branch name
+        ref: ${{ github.event.inputs.solution_target_folder}}/${{ github.event.inputs.solution_name }} 
 
     # Step 2: Copy the folder to a temporary directory
     - name: Copy Folder
       run: |
         mkdir -p temp-folder
-        cp -R path/to/folder temp-folder/ # Replace with the folder path you want to copy
+        cp -R ${{ github.event.inputs.solution_target_folder}}/${{ github.event.inputs.solution_name }}  temp-folder/ # Replace with the folder path you want to copy
 
     # Step 3: Checkout the target branch
     - name: Checkout Target Branch
       run: |
-        git fetch origin target-branch-name # Replace with your target branch name
-        git checkout target-branch-name
+        git fetch origin main
+        git checkout main
 
     # Step 4: Move the folder to the target branch
     - name: Move Folder to Target Branch
       run: |
-        cp -R temp-folder/folder-name path/to/target-location/ # Adjust paths as needed
+        cp -R temp-folder/${{ github.event.inputs.solution_target_folder}}/${{ github.event.inputs.solution_name }} ${{ github.event.inputs.solution_target_folder}}/ # Adjust paths as needed
         git add .
         git commit -m "Copied folder from source-branch-name to target-branch-name"
-         git push origin target-branch-name
+        git push origin main
