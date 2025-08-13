@@ -80,9 +80,5 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         allow-empty-commit: true
         
-    - name: create pull request
-      run: gh pr create -B main -H ${{ github.head_ref }} --title 'Merge branch_to_merge into base_branch' --body 'Created by Github action'
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
+    
     
