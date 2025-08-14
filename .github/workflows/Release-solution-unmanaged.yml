@@ -1,4 +1,4 @@
-name: release-solution-unmanaged-reusable
+name: release-solution-unmanaged
 # Reusable workflow
 # upload the solution to the GitHub artifacts and deploy to the unmanaged environments
 on:
