@@ -2,7 +2,7 @@ name: release-solution-unmanaged
 # Reusable workflow
 # upload the solution to the GitHub artifacts and deploy to the unmanaged environments
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs: 
       #Do Not change these values
       #Values are set by the caller
